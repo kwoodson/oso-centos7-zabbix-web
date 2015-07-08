@@ -32,6 +32,7 @@ RUN sed -r -ie 's/^;(date.timezone).*/\1 = America\/New_York/g' /etc/php.ini
 RUN chmod 777 /var/run/httpd
 RUN chmod 777 /etc/httpd
 RUN chmod 777 /var/log/httpd/
+RUN chmod -R 777 /usr/share/zabbix/
 
 
 # Start apache
