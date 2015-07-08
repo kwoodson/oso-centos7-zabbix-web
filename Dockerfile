@@ -5,8 +5,9 @@
 
 FROM oso-centos7-ops-base:latest
 
-EXPOSE 80
-EXPOSE 443
+#EXPOSE 80
+#EXPOSE 443
+EXPOSE 8000
 
 # Lay down the zabbix repository
 RUN yum clean metadata && \
