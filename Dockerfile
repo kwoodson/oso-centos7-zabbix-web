@@ -27,6 +27,10 @@ ADD httpd.conf /etc/httpd/conf/
 # Set the timezone in the php.ini file
 RUN sed -r -ie 's/^;(date.timezone).*/\1 = America\/New_York/g' /etc/php.ini
 
+# Fix v3 specific environment
+RUN chmod 777 /var/run/httpd
+
+
 # Start apache
 ADD start.sh /usr/local/bin/
 CMD /usr/local/bin/start.sh
