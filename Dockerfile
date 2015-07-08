@@ -5,6 +5,9 @@
 
 FROM oso-centos7-ops-base:latest
 
+EXPOSE 80
+EXPOSE 443
+
 # Lay down the zabbix repository
 RUN yum clean metadata && \
     yum install -y openshift-ops-yum-zabbix && \
