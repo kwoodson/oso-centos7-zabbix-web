@@ -3,7 +3,7 @@
 # /root/start.sh will then start the httpd.
 # Default login:password to Zabbix is Admin:zabbix
 
-FROM oso-centos7-ops-base:latest
+FROM oso-rhel7-ops-base:latest
 
 #EXPOSE 80
 #EXPOSE 443
