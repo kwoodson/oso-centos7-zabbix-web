@@ -15,7 +15,7 @@ RUN yum clean metadata && \
     yum clean all
 
 # Install zabbix from zabbix repo
-RUN yum install -y zabbix-web-mysql && \
+RUN yum install -y zabbix-web-mysql mariadb && \
     yum -y update && \
     yum clean all
 

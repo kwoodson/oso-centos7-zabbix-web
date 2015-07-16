@@ -3,11 +3,11 @@
 global $DB;
 
 $DB["TYPE"]             = 'MYSQL';
-$DB["SERVER"]           = $_ENV["MYSQL_HOST"];
+$DB["SERVER"]           = getenv("MYSQL_HOST");
 $DB["PORT"]             = '3306';
 $DB["DATABASE"]         = 'zabbix';
-$DB["USER"]             = $_ENV["MYSQL_USER"];
-$DB["PASSWORD"]         = $_ENV["MYSQL_PASSWORD"];
+$DB["USER"]             = getenv("MYSQL_USER");
+$DB["PASSWORD"]         = getenv("MYSQL_PASSWORD");
 // Schema name. Used for IBM DB2 and PostgreSQL.
 $DB["SCHEMA"]           = '';
 
