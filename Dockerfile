@@ -28,9 +28,12 @@ ADD httpd.conf /etc/httpd/conf/
 # Set the timezone in the php.ini file
 RUN sed -r -ie 's/^;(date.timezone).*/\1 = America\/New_York/g' /etc/php.ini
 
+# Add ansible playbooks
+ADD ansible /root/ansible/
+
 # Fix v3 specific environment
 RUN chmod 777 /var/run/httpd /etc/httpd /var/log/httpd/ /etc/passwd
-RUN chmod -R 777 /etc/zabbix/web /usr/share/zabbix/
+RUN chmod -R 777 /etc/zabbix/web /usr/share/zabbix/ /root/
 
 # Start apache
 ADD start.sh /usr/local/bin/
